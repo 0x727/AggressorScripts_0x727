@@ -10,7 +10,7 @@
 
 ## 为什么选择 Aggressor Scripts ?
 
-In the red team work, there are many requirements that need to be implemented in C2, so I integrated a multi-functional invader script based on Cobalt Strike's standard document.
+在红队工作中，有很多需求需要在C2中实现，所以我集成了一个基于Cobalt Strike的标准文档的多功能Aggressor Scripts。
 
 ## 快速开始体验
 

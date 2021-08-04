@@ -10,7 +10,7 @@ This project integrates multiple AggressorScripts and multiple PE files to form 
 
 ## Why Aggressor Scripts ?
 
-Aggressor Script 是 Cobalt Strike 3.0 及更高版本中内置的脚本语言。 Aggressor Script 允许您修改和扩展 Cobalt Strike 客户端。
+Aggressor Script is the scripting language built into Cobalt Strike, version 3.0, and later. Aggresor Script allows you to modify and extend the Cobalt Strike client.
 
 ## Quick start Installation
 
