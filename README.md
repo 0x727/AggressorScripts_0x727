@@ -129,6 +129,10 @@ Interested in getting involved? We would like to help you!
 * Sorry for my poor English. Improvements for this document are welcome, even some typo fixes.
 * If you have great ideas, email 0x727Team@gmail.com.
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/0x727/AggressorScript.svg)](https://starchart.cc/0x727/AggressorScript)
+
 
 ## Thanks for these open source projects
 
