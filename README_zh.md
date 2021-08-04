@@ -1,6 +1,6 @@
 # Aggressor Scripts
 
-[English](./README.md) | [中文简体](./README_zh.md)
+[English](./index.md) | [中文简体](./README_zh.md)
 
 
 | 类别 | 说明 |
