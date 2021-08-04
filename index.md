@@ -3,7 +3,7 @@
 [English](./index.md) | [中文简体](./README_zh.md)
 
 
-| 类别 | 说明 |
+| Category | Instruction |
 | ---- | --- |
 | Author | [Rvn0xsy](https://github.com/Rvn0xsy) | 
 | Team | [0x727](https://github.com/0x727) Open source tools will continue for some time to come |
