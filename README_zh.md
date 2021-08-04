@@ -72,7 +72,7 @@ $ git clone https://github.com/0x727/AggressorScripts
 - 更新派生Aliyun C2的反射DLL
 > 由于Cobaltstrike 4.0判断进程位数有点问题，暂时使用x86测试通过
 
-**20201/03/11**
+**2020/03/11**
 
 - [支持DingDing机器人提醒](./DingPack/DIngPack.cna)
 

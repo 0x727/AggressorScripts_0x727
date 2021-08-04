@@ -75,7 +75,7 @@ Please follow the [Cobalt Strike Aggressor Script](https://cobaltstrike.com/aggr
 
 > Since Cobaltstrike 4.0 has a problem with judging the number of processes, temporarily use the x86 test to pass
 
-**20201/03/11**
+**2020/03/11**
 
 - [Support DingDing robot reminder](./DingPack/DIngPack.cna)
 
