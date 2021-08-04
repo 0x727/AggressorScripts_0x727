@@ -2,7 +2,16 @@
 
 [English](./README.md) | [中文简体](./README_zh.md)
 
-This project integrates multiple AggressorScripts and multiple PE files to form a CNA-only toolkit, which needs to be loaded on Cobalt Strike for browsing capabilities and rapid penetration.
+
+| 类别 | 说明 |
+| ---- | --- |
+| Author | [Rvn0xsy](https://github.com/Rvn0xsy) | 
+| Team | [0x727](https://github.com/0x727) Open source tools will continue for some time to come |
+| Position | This project integrates multiple AggressorScripts and multiple PE files to form a CNA-only toolkit, which needs to be loaded on Cobalt Strike for browsing capabilities and rapid penetration.|
+| Language | Aggressor Script、C++、C# |
+| Function | Support red team penetration testing in multiple scenarios of Cobalt Strike | 
+
+
 
 ## What is Aggressor Scripts ?
 

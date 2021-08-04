@@ -2,7 +2,13 @@
 
 [English](./README.md) | [中文简体](./README_zh.md)
 
-本项目集成多个 AggressorScripts 与 多个PE文件形成一个CNA工具包，只需要加载到Cobalt Strike上即可享受便捷、快速的渗透之旅。
+| 类别 | 说明 |
+| ---- | --- |
+| 作者 | [Rvn0xsy](https://github.com/Rvn0xsy) | 
+| 团队 | [0x727](https://github.com/0x727) 未来一段时间将陆续开源工具 |
+| 定位 | 本项目集成多个 AggressorScripts 与多个PE文件形成一个CNA工具包，只需要加载到Cobalt Strike上即可享受便捷、快速的渗透之旅。|
+| 语言 | Aggressor Script、C++、C# |
+| 功能 | 支持Cobalt Strike多种场景下的红队渗透测试工作| 
 
 ## 什么是 Aggressor Scripts ?
 
