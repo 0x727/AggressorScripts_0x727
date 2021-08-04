@@ -133,7 +133,7 @@ Aggressor Script 是一个免费且开源的项目，我们欢迎任何人为其
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/0x727/AggressorScript_0x727.svg)](https://starchart.cc/0x727/AggressorScript_0x727)
+[![Stargazers over time](https://starchart.cc/0x727/AggressorScripts_0x727.svg)](https://github.com/0x727/AggressorScripts_0x727)
 
 ## 感谢这些开源项目
 

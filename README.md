@@ -131,7 +131,7 @@ Interested in getting involved? We would like to help you!
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/0x727/AggressorScript_0x727.svg)](https://starchart.cc/0x727/AggressorScript_0x727)
+[![Stargazers over time](https://starchart.cc/0x727/AggressorScripts_0x727.svg)](https://github.com/0x727/AggressorScripts_0x727)
 
 
 ## Thanks for these open source projects
