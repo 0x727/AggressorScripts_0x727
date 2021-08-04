@@ -25,12 +25,12 @@ Aggressor Script is the scripting language built into Cobalt Strike, version 3.0
 
 **Download Install**
 
-Download [Release](https://github.com/0x727/AggressorScripts/releases) Zip File.
+Download [Release](https://github.com/0x727/AggressorScripts_0x727/releases) Zip File.
 
 **Git Download**
 
 ```bash
-$ git clone https://github.com/0x727/AggressorScripts
+$ git clone https://github.com/0x727/AggressorScripts_0x727
 ```
 
 ## Usage example
