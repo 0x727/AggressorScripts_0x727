@@ -23,12 +23,12 @@
 
 **下载安装包**
 
-下载 [Release](https://github.com/0x727/AggressorScripts/releases) 压缩包.
+下载 [Release](https://github.com/0x727/AggressorScripts_0x727/releases) 压缩包.
 
 **Git下载安装**
 
 ```bash
-$ git clone https://github.com/0x727/AggressorScripts
+$ git clone https://github.com/0x727/AggressorScripts_0x727
 ```
 
 ## 使用方法
