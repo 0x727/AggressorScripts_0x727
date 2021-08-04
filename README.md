@@ -1,57 +1,142 @@
-
-![logo](./doc/images/logo.png)
-
-# 仓库名称
+# Aggressor Scripts
 
 [English](./README.md) | [中文简体](./README_zh.md)
 
-这里是仓库说明，建议与About描述一样
+This project integrates multiple AggressorScripts and multiple PE files to form a CNA-only toolkit, which needs to be loaded on Cobalt Strike for browsing capabilities and rapid penetration.
 
-## What is 【仓库名称】 ?
+## What is Aggressor Scripts ?
 
-这里是第一段介绍，从当前项目的背景切入
+[Aggressor Script](https://cobaltstrike.com/aggressor-script/index.html) is the scripting language built into Cobalt Strike, version 3.0, and later. Aggresor Script allows you to modify and extend the Cobalt Strike client.
 
-## Why 【仓库名称】 ?
+## Why Aggressor Scripts ?
 
-突出解决了什么问题，具备哪些优势
+Aggressor Script 是 Cobalt Strike 3.0 及更高版本中内置的脚本语言。 Aggressor Script 允许您修改和扩展 Cobalt Strike 客户端。
 
 ## Quick start Installation
 
-### 1. Build Install
+**Download Install**
 
-> 注意事项：根据情况补充
+Download [Release](https://github.com/0x727/AggressorScripts/releases) Zip File.
 
-### 2. Download Release Install
-
-如何做，需要什么环境
+**Git Download**
 
 ```bash
-$ commmand there
+$ git clone https://github.com/0x727/AggressorScripts
 ```
-
-### 3. Docker Install
 
 ## Usage example
 
-1. 第一个演示 - 描述
 
-```bash
-$ curl -I http://0x727
-```
+Please follow the [Cobalt Strike Aggressor Script](https://cobaltstrike.com/aggressor-script/index.html) documentation
 
-2. 第二个演示 - 描述
+> Users need to understand the basic concepts of Cobalt Strike Aggressor Script
 
-```bash
-$ curl -I http://0x727
-```
 
-> 这个环节主要是为了帮助使用者快速上手当前项目，参数较多的可以用表格展示
+## CHANGE LOG
+
+
+**2020/01/08**
+
+- Support Pass-The-Hash(PTH)
+- Support DcSync
+- Support Clone User
+- Support Mimikatz logonPasswords
+- Support Mimikatz Skeleton
+- Support Dump krbtgt Hash
+- Support Create Golden ticket
+- Support Impersonate Process Token
+
+**2020/01/08**
+
+- Support [Frp](https://github.com/fatedier/frp) Config
+- Support Dump Navicat Passwords
+- Support Dump Browser Passwords
+
+**2020/07/07**
+
+- Support PrintSpool local privilege escalation
+- Support [atexec](https://payloads.online/archivers/2020-06-28/1)
+- Support SpwanReflectiveC2
+- Support DingDing Robot (MacOS,Windows 10,Linux)
+- Fix several Powershell script loading problems
+
+**2020/07/10**
+
+- Update the reflection DLL derived from Aliyun C2
+
+> Since Cobaltstrike 4.0 has a problem with judging the number of processes, temporarily use the x86 test to pass
+
+**20201/03/11**
+
+- [Support DingDing robot reminder](./DingPack/DIngPack.cna)
+
+
+### Mimikatz
+
+- Support Pass-The-Hash(PTH)
+- Support DcSync
+- Support Clone User
+- Support Mimikatz logonPasswords
+- Support Mimikatz Skeleton
+- Support Dump krbtgt Hash
+- Support the creation of Golden ticket
+- Support for listing access tokens, access token privilege elevation, and access token counterfeiting
+- One-click execution Dump lsass.exe
+- One-click execution Lazagne.exe
+- One-click execution Dump Navicat Passwords
+- One-click execution Bloodhund Powershell
+- One-click execution Bloodhund C#
+
+
+![](images/2020-01-08-17-00-32.png)
+
+
+### Procdump && Lazagne && Navicat
+
+- One-click execution Dump lsass.exe
+- One-click execution [Lazagne](https://github.com/AlessandroZ/LaZagne)
+- One-click execution Dump Navicat Passwords
+
+![](images/2020-01-08-17-02-13.png)
+
+![](images/2020-01-08-17-40-51.png)
+
+**Lazagne.exe file bottleneck, need to wait**
+
+### Bloodhound
+
+- One-click execution [Bloodhound](https://github.com/BloodHoundAD/BloodHound) Powershell
+- One-click execution Bloodhound C#
+
+![](images/2020-01-08-17-03-57.png)
+
+
+## Key technology
+
+- [Cobalt Strike Aggressor Script （第一课）](https://payloads.online/archivers/2020-03-02/4)
+- [Cobalt Strike Aggressor Script （第二课）](https://payloads.online/archivers/2020-03-02/5)
+- [通过反射DLL注入来构建后渗透模块（第一课）](https://payloads.online/archivers/2020-03-02/1)
+- [如何实现一个Atexec](https://payloads.online/archivers/2020-06-28/1)
+- [如何实现一个Psexec](https://payloads.online/archivers/2020-04-02/1)
+
 
 ## Contributing
 
 Interested in getting involved? We would like to help you!
 
-* Take a look at our [issues list](https://github.com/0x727/Template/issues) and consider sending a Pull Request to **dev branch**.
+* Take a look at our [issues list](https://github.com/0x727/AggressorScripts/issues) and consider sending a Pull Request to **dev branch**.
 * If you want to add a new feature, please create an issue first to describe the new feature, as well as the implementation approach. Once a proposal is accepted, create an implementation of the new features and submit it as a pull request.
 * Sorry for my poor English. Improvements for this document are welcome, even some typo fixes.
 * If you have great ideas, email 0x727Team@gmail.com.
+
+
+## Thanks for these open source projects
+
+- [LaZagne](https://github.com/AlessandroZ/LaZagne)
+- [Mimikatz](https://github.com/gentilkiwi/mimikatz)
+- [Bloodhound](https://github.com/BloodHoundAD/BloodHound)
+- [PowerSploit](https://github.com/PowerShellMafia/PowerSploit)
+- [frp](https://github.com/fatedier/frp)
+- [BrowserGhost](https://github.com/QAX-A-Team/BrowserGhost)
+- [Ladon](https://github.com/k8gege/Ladon)
+- ...

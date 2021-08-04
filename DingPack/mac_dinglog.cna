@@ -1,0 +1,111 @@
+
+%ding_options["webhookURL"] = '';
+
+%ding_options["teamserver"] = localip();
+
+%ding_options["enabled"] = 'false';
+
+
+
+#settings dialog
+
+sub settings {
+
+	$dialog = dialog("Event Log to ding Settings", %(webhookURL => %ding_options["webhookURL"], teamserver => %ding_options["teamserver"], enabled => %ding_options["enabled"]), lambda({
+		%ding_options["webhookURL"] = $3['webhookURL'];
+		%ding_options["enabled"] = $3['enabled'];
+		%ding_options["teamserver"] = $3['teamserver'];
+		if (%ding_options["enabled"] eq 'true') {
+			#initialize script with message to event log
+			elog("Event Log to ding enabled on teamserver.");
+		}		
+	}));
+
+	dialog_description($dialog, "Set up Cobalt Strike to send all messages in the Event Log to ding via an incoming webhook.");
+	
+	drow_text($dialog, "webhookURL",  "ding Webhook URL:");
+	drow_text($dialog, "teamserver", "Teamserver Identifier:");
+	drow_checkbox($dialog, "enabled", "Enabled:");
+	dbutton_action($dialog, "Save");
+	dialog_show($dialog);
+
+}
+
+#send the message to ding
+sub sendMessage {
+	# $1 = timestamp of message, $2 = message
+	$timestamp = formatDate($1,"MM/dd/yyyy - HH:mm:ss z");
+	
+	@command = @(script_resource('DIngPack/DIngPack-darwin-amd64'),%ding_options["webhookURL"],$timestamp . '-' . $2);
+	
+	$output = readAll(exec(@command));	
+	
+    println(@command)
+	println($output)
+	
+	closef($output);
+} 
+
+#event triggers
+on event_action {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($3,"$1 - $2");
+	}
+}
+
+on event_beacon_initial {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($2,"initial Beacon from $1");
+	}
+}
+
+on event_join {
+	if (%ding_options["enabled"] eq 'true') {
+		# sendMessage($2,"$1 joined the server");
+	}
+}
+
+on event_newsite {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($3,"$1 $2");
+	}
+}
+
+on event_notify {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($2,$1);
+	}
+}
+
+on event_nouser {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($2,"$1 timed out");
+	}
+}
+
+on event_public {
+	if (%ding_options["enabled"] eq 'true') {
+		sendMessage($3,"$1 - $2");
+	}
+}
+
+on event_quit {
+	if (%ding_options["enabled"] eq 'true') {
+		# sendMessage($2,"$1 logged out of the server");
+	}
+}
+
+if (%ding_options["enabled"] eq 'true') {
+	#initialize script with message to event log
+	elog("Event Log to ding enabled on teamserver.");
+}
+
+#menubar options
+menubar("Event Log to ding", "eventlog-to-ding", 2);
+
+# modify the main "Attacks" menu
+popup eventlog-to-ding {
+    item "Settings" {
+        settings();
+    }
+}

